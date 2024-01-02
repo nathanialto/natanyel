@@ -44,10 +44,11 @@ h4{
 a{  color: #F9E0BB;
     text-decoration: none;
     font-size: 1.9em;
-    padding: 8px 40px;
+    padding: 10px 40px;
     margin: 20px auto;
     border-radius: 30px;
-    transition: 0.35s;   
+    transition: 0.35s;
+    background-color:#342F43;
 }
 p{
     font-family: "Inter", sans-serif;
@@ -68,8 +69,6 @@ li{
 }
 .topnav{
     display: flex;
-    text-align: center;
-    /* padding: 0 10vw; */
     align-items: center;
     position: fixed;
     z-index: 100;
@@ -78,15 +77,16 @@ li{
     top:0;
 }
 #namenav{
-    border: 6px solid #F9E0BB;
+    /* border: 6px solid #342F43; */
     border-radius: 30px;
     border-style: inline;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    /* align-self: center; */
 }
 .gallery{
     display: flex; 
     flex-direction: row;
-    margin: 125px 10vw 0;
+    margin: 50px 10vw 0;
 }
 .featured{
     border: 0;
@@ -95,13 +95,11 @@ li{
     margin: 0% 5% 7.5% 5%;
     position: relative;
 }
-
 .featured>img{
     border-radius: 5%;
     width: 100%;
     transition: 0.35s;
 }
-
 .featured>a{
     position: absolute;
     color: #342F43;
@@ -170,9 +168,7 @@ li{
     height: 100%;
     align-self: center;
     margin: auto;
-
 }
-
 .lead-image{
     margin: 10px 10% 30px;
     border-radius: 30px;
@@ -183,6 +179,15 @@ li{
     margin: 125px 10vw 0;
     flex-direction: column;
     margin: 0px 20vw 100px;
+}
+.subheader{
+    margin: 120px 10vw 0;
+    text-align: center;
+}
+.subheader>a{
+    margin: auto 15px auto;
+    font-size: 25px;
+    padding: 7px 30px;
 }
 .active{
     color: #342F43;
@@ -209,6 +214,45 @@ li{
     background-color: #342F43;
     color:#F9E0BB;
 }
-
+#first-nav-item{
+    position: absolute; 
+    margin-left: 25%; 
+    transform: translate(-50%, 0)
+}
+#second-nav-item{
+    position: relative; 
+    margin-left: 50%; 
+    transform: translate(-50%, 0)
+}
+#third-nav-item{
+    position: absolute; 
+    margin-left: 75%; 
+    transform: translate(-50%, 0)
+}
+@media screen and (max-width: 650px) {
+    .scroll{
+        width: 100%;
+    }
+    img{
+        width:80vw
+    }
+    .gallery{
+        display: block; 
+        flex-direction: row;
+        margin: auto;
+    }
+    .featured>a{
+        margin:15px;
+    }
+    .topnav{
+        padding: auto ;
+        width: 100%;
+        font-size: 15px;
+    }
+    .topnav>a{
+        padding: 5px 10px;
+    }
+    
+}
 
 /* Make sure to take away extra space on sides on tablet version */
