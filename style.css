@@ -128,13 +128,16 @@ li{
     flex-direction: column;
     margin: 150px 15vw 100px;
 }
+.illustration>button{
+    margin-bottom: 40px;
+}
 .header{
     margin: 125px auto 30px;
     width: fit-content;
 }
 .slider{
     position: fixed;
-    bottom: 10px;
+    bottom: 40px;
     left: 50vw;
     transform: translateX(-50%);
     margin: 25px 0;
@@ -169,6 +172,13 @@ li{
     align-self: center;
     margin: auto;
 }
+.photo-grid>div{
+    width: calc(50% - 10px);
+    border-radius: 20px;
+    height: 100%;
+    align-self: center;
+    margin: auto;
+}
 .lead-image{
     margin: 10px 10% 30px;
     border-radius: 30px;
@@ -176,9 +186,15 @@ li{
 .project-page{
     display: flex; 
     flex-direction: row;
-    margin: 125px 10vw 0;
     flex-direction: column;
     margin: 0px 20vw 100px;
+}
+.about{
+    display: flex; 
+    flex-direction: row;
+    margin: 125px 10vw 0;
+    flex-direction: column;
+    margin: 125px 20vw 0px;
 }
 .subheader{
     margin: 120px 10vw 0;
@@ -187,6 +203,7 @@ li{
 .subheader>a{
     margin: auto 15px auto;
     font-size: 25px;
+    font-weight: 100;
     padding: 7px 30px;
 }
 .active{
@@ -229,7 +246,7 @@ li{
     margin-left: 75%; 
     transform: translate(-50%, 0)
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 900px) {
     .scroll{
         width: 100%;
     }
@@ -247,12 +264,76 @@ li{
     .topnav{
         padding: auto ;
         width: 100%;
-        font-size: 15px;
     }
     .topnav>a{
         padding: 5px 10px;
     }
-    
+    *{
+        /* font-size: 11px; */
+    }
+    #first-nav-item{
+        position: relative; 
+        margin-left: auto; 
+        transform: translate(0, 0)
+    }
+    #second-nav-item{
+        position: relative; 
+        margin-left: auto; 
+        transform: translate(0, 0);
+        bottom: 5%;
+    }
+    #third-nav-item{
+        position: relative;
+        margin-left: auto;
+        transform: translate(0, 0);
+    }
+    .subheader{
+        margin: 8vh 5% 0;
+        text-align: left;
+    }
+    .illustration{ 
+        flex-direction: column;
+        margin: 8vh 5% 0px;
+    }
+    .illustration>button{
+        max-width: 100%;
+    }
+    .project-page, .about{
+        display: flex; 
+        flex-direction: row;
+        flex-direction: column;
+        margin: 8vh 5% 100px;
+        width: 90%;
+    }
+    .lead-image{
+        margin: auto;
+        border-radius: 10px;
+    }
+    .header{
+        margin: 0 auto 20px;
+    }
+    .skills{
+        flex-flow: row wrap;
+        margin-bottom: 10px;
+    }
+    .skills>a{
+        margin: 20px 10px 0px 0px;
+    }
+    .featured>a{
+        font-size: 20px;
+    }
+    h2{ font-size: 30px;}
+    h3{ font-size: 20px;}
+    h4{ font-size: 20px; font-weight: 600;}
+    a{ font-size: 20px;}
+    .skills>a{font-size: 15px;}
+    .photo-grid>div{
+        width: 100%;
+        border-radius: 20px;
+        height: 100%;
+        align-self: center;
+        margin: auto;
+    }
 }
 
 /* Make sure to take away extra space on sides on tablet version */
